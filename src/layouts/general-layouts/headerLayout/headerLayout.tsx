@@ -11,14 +11,12 @@ align-items: center;
 justify-content: space-between;
 padding-bottom: 1rem;
 border-bottom: 1px solid #E3E3E3;
-
-
 `
 
 const HeaderLayout = ({}) => {
 
     return (
-        <StyledLayout>
+        <StyledLayout> 
              <Image src={'/logo/logo.svg'} alt="logo" width={185} height={40} />
              <ListHeaderLayout />
              <div>

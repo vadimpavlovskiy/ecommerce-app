@@ -42,6 +42,12 @@ const StyledImage = styled(Image)`
 border-radius: 80px 0;
 margin-right: 5%;
 
+transition: 500ms;
+
+&:hover {
+    transform: scale(1.1);
+}
+
 
 @media (max-width: 1024px) {
     display: none;
