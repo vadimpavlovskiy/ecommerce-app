@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import StyledComponentsRegistry from "@/lib/registry";
+import GlobalStyles from "@/styles/GlobalStyles";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -16,7 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>{children}</body>
+      <body className={montserrat.className}>
+      <StyledComponentsRegistry>
+        <GlobalStyles />
+          {children}
+      </StyledComponentsRegistry>
+        </body>
     </html>
   );
 }
