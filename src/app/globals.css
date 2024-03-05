@@ -3,4 +3,9 @@ body,
 :root {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  margin: 2.5% 2.5% 0 2.5%;
 }
