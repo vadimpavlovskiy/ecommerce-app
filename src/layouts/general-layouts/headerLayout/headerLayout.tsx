@@ -9,6 +9,10 @@ display: flex;
 
 align-items: center;
 justify-content: space-between;
+padding-bottom: 1rem;
+border-bottom: 1px solid #E3E3E3;
+
+
 `
 
 const HeaderLayout = ({}) => {
