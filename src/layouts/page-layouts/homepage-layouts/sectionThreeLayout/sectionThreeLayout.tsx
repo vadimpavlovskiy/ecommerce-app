@@ -4,9 +4,9 @@ import ProductCardLarge from "@/components/productCardLarge/productCardLarge"
 import styled from "styled-components"
 const StyledCarts = styled.div`
     display: grid;
-    gap: 24px;
+    gap: 16px;
 
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 
     @media (max-width: 1024px) {
         display: grid;

@@ -10,12 +10,15 @@ cursor: pointer;
 font-weight: bold;
 color: white;
 
+text-transform: capitalize;
+
+
 width: max-content;
 `
 
-const ButtonComponent = ({}) => {
+const ButtonComponent = ({text}:{text:string}) => {
     return (
-        <StyledButton>Buy Now</StyledButton>
+        <StyledButton>{text}</StyledButton>
     )
 }
 

@@ -17,6 +17,10 @@ const StyledCard = styled.div`
     *{
         margin: 0;
     }
+
+    @media (min-width: 1024px) {
+        
+    }
 `
 
 const ProductCardLarge = ({}) => {
