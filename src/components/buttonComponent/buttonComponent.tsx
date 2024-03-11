@@ -16,9 +16,9 @@ text-transform: capitalize;
 width: max-content;
 `
 
-const ButtonComponent = ({text}:{text:string}) => {
+const ButtonComponent = ({text, type}:{text:string, type: "button" | "submit"}) => {
     return (
-        <StyledButton>{text}</StyledButton>
+        <StyledButton type={type}>{text}</StyledButton>
     )
 }
 

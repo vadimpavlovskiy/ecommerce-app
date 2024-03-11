@@ -1,6 +1,7 @@
 
-import { HTMLInputTypeAttribute } from "react"
+import { ChangeEvent, Dispatch, HTMLInputTypeAttribute, SetStateAction } from "react"
 import styled from "styled-components"
+import IInput from "./types/input"
 
 const StyledContainer = styled.div`
     display: grid;
@@ -15,10 +16,12 @@ const StyledInput = styled.input`
     width: 300px;
 `
 
-const InputComponent = ({placeholder, value, type, required}:{placeholder:string, value: string, type: HTMLInputTypeAttribute | undefined, required?: boolean | undefined}) => {
+const InputComponent = ({placeholder, value, type, required, onChange, setStateFunction, min, max}:IInput) => {
     return (
         <StyledContainer>
-            <StyledInput required={required} type={type} value={value} placeholder={placeholder} />
+            <StyledInput onChange={(e) => {
+                onChange(e, setStateFunction)
+            }} required={required} type={type} value={value} placeholder={placeholder} min={min} max={max} />
         </StyledContainer>
     )
 }
