@@ -1,5 +1,5 @@
 
-import { HTMLInputTypeAttribute } from "react"
+import { ChangeEvent, Dispatch, HTMLInputTypeAttribute, SetStateAction } from "react"
 import styled from "styled-components"
 
 const StyledContainer = styled.div`
@@ -15,10 +15,21 @@ const StyledInput = styled.input`
     width: 300px;
 `
 
-const InputComponent = ({placeholder, value, type, required}:{placeholder:string, value: string, type: HTMLInputTypeAttribute | undefined, required?: boolean | undefined}) => {
+const InputComponent = (
+    {placeholder, value, type, required, onChange, setState}
+    :
+    {
+        placeholder:string, 
+        value: string, 
+        type: HTMLInputTypeAttribute | undefined, 
+        required?: boolean | undefined, 
+        onChange:(event: ChangeEvent<HTMLInputElement>, setState: Dispatch<SetStateAction<string>>) => void,
+        setState: Dispatch<SetStateAction<string>>
+
+}) => {
     return (
         <StyledContainer>
-            <StyledInput required={required} type={type} value={value} placeholder={placeholder} />
+            <StyledInput onChange={(event)=>onChange(event, setState)} required={required} type={type} value={value} placeholder={placeholder} />
         </StyledContainer>
     )
 }

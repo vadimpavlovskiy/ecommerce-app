@@ -4,8 +4,6 @@ import StyledComponentsRegistry from "@/lib/registry";
 import GlobalStyles from "@/styles/GlobalStyles";
 import styles from "./page.module.css";
 import './globals.css'
-import { SupabaseProvider } from "@/providers/SupabaseProvider";
-import UserProvider from "@/providers/UserProvider";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -23,13 +21,9 @@ export default function RootLayout({
       <body className={montserrat.className}>
       <StyledComponentsRegistry>
         <GlobalStyles />
-        <SupabaseProvider>
-          <UserProvider>
             <main className={styles.main}>
               {children}
             </main>
-          </UserProvider>
-        </SupabaseProvider>
       </StyledComponentsRegistry>
         </body>
     </html>
