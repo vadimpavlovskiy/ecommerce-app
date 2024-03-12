@@ -61,7 +61,7 @@ const SectionOneLayout = ({}) => {
                 <p style={{fontSize: '16px', fontWeight: "normal", letterSpacing: '3px'}}>New Arrival</p>
                 <h1 style={{fontSize: '52px', fontWeight: 'bold', lineHeight: '65px', color: '#B88E2F'}}>Discover Our New Collection!</h1>
                 <p style={{fontSize: '18px', fontWeight: 'bolder', color: '#333333', marginBottom: '46px'}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur id iure voluptatum distinctio totam porro aspernatur perspiciatis.</p>
-                <ButtonComponent type="button" text="Buy Now" />
+                <ButtonComponent text="Buy Now" />
             </StyledBlock>
             <StyledImage src={'/images/section-one-photo.png'} width={300} height={562} alt='New Chair' />
         </StyledSection>
